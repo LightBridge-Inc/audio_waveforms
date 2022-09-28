@@ -197,10 +197,8 @@ class AudioWaveformsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     }
 
     private fun initPlayer(playerKey: String) {
-        if (audioPlayers[playerKey] == null) {
-            val newPlayer = AudioPlayer(applicationContext, channel, playerKey)
+         val newPlayer = AudioPlayer(applicationContext, channel, playerKey)
             audioPlayers[playerKey] = newPlayer
-        }
         return
     }
 
